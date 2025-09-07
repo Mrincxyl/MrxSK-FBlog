@@ -1,4 +1,33 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>About Page</h1>
+<div class="container mt-4">
+    <div class="card shadow-sm p-4 rounded-3">
+        <h1 class="mb-3 text-primary">About This Blog</h1>
+        <p class="lead">
+            Welcome to <strong>Flask Blog</strong> — a simple blogging platform built with Flask. 
+            It allows users to create accounts, write posts, update their profile, and share ideas with others.
+        </p>
+        
+        <hr>
+
+        <h3 class="mt-3">✨ Features</h3>
+        <ul>
+            <li>User authentication (register, login, logout, password reset)</li>
+            <li>Create, edit, and delete posts</li>
+            <li>Profile management with profile pictures</li>
+            <li>Responsive and clean design</li>
+        </ul>
+
+        <h3 class="mt-3">👨‍💻 About the Developer</h3>
+        <p>
+            This project was developed as a practice project using Flask. 
+            It combines Python, SQLAlchemy, and Flask extensions like Flask-Login and Flask-WTF 
+            to demonstrate how a full-stack web app can be built.
+        </p>
+
+        <p>
+            The goal is to keep learning, improving, and building more advanced projects 🚀.
+        </p>
+    </div>
+</div>
 {% endblock %}

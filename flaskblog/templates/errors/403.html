@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="content-section">
-        <h1>You don't have permission to do that (403)</h1>
-        <p>Please check your account and try again</p>
-    </div>
+<div class="content-section text-center">
+    <h1 class="display-4 text-danger">403 - Forbidden</h1>
+    <p class="lead">Oops! You don't have permission to access this page.</p>
+    <hr>
+    <p>Check your account or return to a safe page.</p>
+    <a href="{{ url_for('main.home') }}" class="btn btn-outline-info mt-3">Go Home</a>
+</div>
 {% endblock content %}

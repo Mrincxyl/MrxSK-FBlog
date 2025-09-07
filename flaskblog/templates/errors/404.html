@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="content-section">
-        <h1>Oops. Page Not Found (404)</h1>
-        <p>That page does not exist. Please try a different location</p>
-    </div>
+<div class="content-section text-center">
+    <h1 class="display-4 text-warning">404 - Page Not Found</h1>
+    <p class="lead">Sorry! The page you are looking for does not exist.</p>
+    <hr>
+    <p>Try using the navigation above or return to the homepage.</p>
+    <a href="{{ url_for('main.home') }}" class="btn btn-outline-info mt-3">Go Home</a>
+</div>
 {% endblock content %}
