@@ -24,13 +24,15 @@ def save_picture(form_picture): # form_picture is the data which user submit to 
     return picture_fn
 
 def send_reset_email(user):
-            # get_reset_token() is a function name in User Model
     token = user.get_reset_token()
-    msg = Message('Password Reset Request',sender=os.environ.get('EMAIL_USER'),recipients=[user.email])
-
+    msg = Message(
+        'Password Reset Request',
+        sender=os.environ.get('EMAIL_USER'),
+        recipients=[user.email]
+    )
     msg.body = f'''To reset your password, visit the following link:
 {url_for('users.reset_token', token=token, _external=True)}
 
-If you did not make this request then simply ignore this email and no changes will be made. 
+If you did not make this request, simply ignore this email.
 '''
     mail.send(msg)

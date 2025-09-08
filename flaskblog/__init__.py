@@ -3,13 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
-
 from flaskblog.config import Config
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
 login_manager = LoginManager()
-login_manager.login_view = 'user.login' # login is the function name , if anyone without login want to access any route or page then this will through the user to the login page , tell that please login to access this page
+login_manager.login_view = 'users.login' # login is the function name , if anyone without login want to access any route or page then this will through the user to the login page , tell that please login to access this page
 login_manager.login_message_category = 'info'
 
 

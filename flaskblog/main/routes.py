@@ -8,7 +8,7 @@ main = Blueprint('main',__name__)
 def home():
     
     page = request.args.get('page',1,type=int) # default page is 1 and 1 is integer type
-    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5) # for each page total post is 2
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=3) # for each page total post is 2
     #paginate for post in single pages
     # order_by for which post want to be in 1st pages 
     return render_template('home.html',posts=posts)

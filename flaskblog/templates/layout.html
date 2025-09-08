@@ -11,14 +11,32 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
-    <title>{{ title if title else "Flask Blog" }}</title>
+    <title>{{ title if title else "MrXsk Blog" }}</title>
+
+    <style>
+        /* Ensure footer sticks to bottom */
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-sm">
         <div class="container">
-          <a class="navbar-brand font-weight-bold" href="{{ url_for('main.home') }}">Flask Blog</a>
+          <a class="navbar-brand font-weight-bold" href="{{ url_for('main.home') }}">MrXsk Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -80,6 +98,13 @@
         </div>
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2025 MrXsk. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

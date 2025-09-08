@@ -1,10 +1,9 @@
-from flaskblog import create_app  
-from flaskblog import db
+from flaskblog import create_app, db
 
 app = create_app()
 
-with app.app_context():
-    db.create_all()
-
+# Only create tables in development, not in production
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
