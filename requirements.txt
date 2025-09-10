@@ -9,3 +9,4 @@ itsdangerous
 gunicorn
 python-dotenv
 email_validator
+psycopg2-binary
